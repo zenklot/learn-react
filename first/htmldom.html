@@ -11,8 +11,9 @@
     
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <script>
+    <script type="text/babel">
         // const root = document.querySelector('#root');
 
         // const element = document.createElement('h1');
@@ -21,52 +22,64 @@
 
         // root.appendChild(element);
 
-        const root = document.querySelector('#root');
-        const element = React.createElement('h1',{
-            className: 'heading-1',
-            children: 'Hello World'
-        });
+        // const root = document.querySelector('#root');
+        // const element = React.createElement('h1',{
+        //     className: 'heading-1',
+        //     children: 'Hello World'
+        // });
 
-        const paragraf1 = React.createElement('p',{
-            className: 'paragraph 1',
-            children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.'
-        });
+        // const paragraf1 = React.createElement('p',{
+        //     className: 'paragraph 1',
+        //     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.'
+        // });
 
-        const paragraf2 = React.createElement('p',{
-            className: 'paragraph 2',
-            children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.'
-        });
+        // const paragraf2 = React.createElement('p',{
+        //     className: 'paragraph 2',
+        //     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.'
+        // });
 
-        const wrapper = React.createElement(React.Fragment,{            
-            children: ['Hello',' JS',paragraf1,paragraf2]
-        });
+        // const wrapper = React.createElement(React.Fragment,{            
+        //     children: ['Hello',' JS',paragraf1,paragraf2]
+        // });
 
 
 
-        const li1 = React.createElement('li',{
-            children: 'Apel'
-        });
-        const li2 = React.createElement('li',{
-            children: 'Mangga'
-        });
-        const li3 = React.createElement('li',{
-            children: 'Jeruk'
-        });
-        const li4 = React.createElement('li',{
-            children: 'Pisang'
-        });
+        // const li1 = React.createElement('li',{
+        //     children: 'Apel'
+        // });
+        // const li2 = React.createElement('li',{
+        //     children: 'Mangga'
+        // });
+        // const li3 = React.createElement('li',{
+        //     children: 'Jeruk'
+        // });
+        // const li4 = React.createElement('li',{
+        //     children: 'Pisang'
+        // });
 
-        const wrapper_list = React.createElement(
-            React.Fragment,
-            null,
-            [li1,li2,li3,li4],
-            React.createElement('li', null, 'Semangka'),
-            "Bebas",
-            " ini children"
+        // const wrapper_list = React.createElement(
+        //     React.Fragment,
+        //     null,
+        //     [li1,li2,li3,li4],
+        //     React.createElement('li', null, 'Semangka'),
+        //     "Bebas",
+        //     " ini children"
+        // );
+
+        const element_babel = (
+            <ul>
+                <li>Apel</li>
+                <li>Mangga</li>
+                <li>Jeruk</li>
+                <li>Pisang</li>
+                <li>Semangka</li>
+            </ul>
         );
 
 
-        ReactDOM.render(wrapper_list, root);
+
+
+        ReactDOM.render(element_babel, root);
     </script>
 </body>
 </html>
