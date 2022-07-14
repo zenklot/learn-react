@@ -76,25 +76,49 @@
         //     </ul>
         // );
 
-        function ngegas(text){
-            return text.toUpperCase();
+        // function ngegas(text){
+        //     return text.toUpperCase();
+        // }
+
+        // const name = 'Supri';
+        // const element = <h1 className="heading-1">Hello {ngegas(name)}</h1>;
+
+        // const className = 'heading-2';
+        // const img_placeholde = 'https://via.placeholder.com/500';
+
+        // const element_babel = (
+        //     <h1 className={className}>Hello {ngegas(name)}</h1>
+        // );
+
+        // const element_img = (
+        //     <img src={img_placeholde} alt=""/>
+        // );
+        // ReactDOM.render(element, root);
+
+        function halo(name){
+            return <p>Halo <b>{name}</b></p>;
         }
 
-        const name = 'Supri';
-        const element = <h1 className="heading-1">Hello {ngegas(name)}</h1>;
+        const element = (
+            <>
+                {halo('supriatna')}
+                {halo('supri')}
+                {halo('sup')}
+            </>
+        )
 
-        const className = 'heading-2';
-        const img_placeholde = 'https://via.placeholder.com/500';
 
-        const element_babel = (
-            <h1 className={className}>Hello {ngegas(name)}</h1>
+        function HalloComponent(props){
+            return <p>Halo <b>{props.name}</b></p>;
+        }
+
+        const element_component = (
+            <>
+                <HalloComponent name="supriatna"/>
+                <HalloComponent name="gozenx"/>
+            </>
         );
-
-        const element_img = (
-            <img src={img_placeholde} alt=""/>
-        );
-        // ReactDOM.render(element, root);
-        ReactDOM.createRoot(root).render(element_img);
+        ReactDOM.createRoot(root).render(element_component);
     </script>
 </body>
 </html>
