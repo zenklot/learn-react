@@ -95,30 +95,44 @@
         // );
         // ReactDOM.render(element, root);
 
-        function halo(name){
-            return <p>Halo <b>{name}</b></p>;
+        // function halo(name){
+        //     return <p>Halo <b>{name}</b></p>;
+        // }
+
+        // const element = (
+        //     <>
+        //         {halo('supriatna')}
+        //         {halo('supri')}
+        //         {halo('sup')}
+        //     </>
+        // )
+
+
+        // function HalloComponent(props){
+        //     return <p>Halo <b>{props.name}</b></p>;
+        // }
+
+        // const element_component = (
+        //     <>
+        //         <HalloComponent name="supriatna"/>
+        //         <HalloComponent name="gozenx"/>
+        //     </>
+        // );
+
+        function tick(){
+            const element = (
+                <div>
+                    <h1>Jam Sekarang</h1>
+                    <h2>{new Date().toLocaleTimeString()}</h2>
+                </div>
+            )
+            ReactDOM.render(element, root);
+            // ReactDOM.createRoot(root).render(element);
         }
-
-        const element = (
-            <>
-                {halo('supriatna')}
-                {halo('supri')}
-                {halo('sup')}
-            </>
-        )
+        tick()
+        setInterval(tick, 1000);
 
 
-        function HalloComponent(props){
-            return <p>Halo <b>{props.name}</b></p>;
-        }
-
-        const element_component = (
-            <>
-                <HalloComponent name="supriatna"/>
-                <HalloComponent name="gozenx"/>
-            </>
-        );
-        ReactDOM.createRoot(root).render(element_component);
     </script>
 </body>
 </html>
