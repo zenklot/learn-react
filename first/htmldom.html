@@ -43,7 +43,30 @@
 
 
 
-        ReactDOM.render(wrapper, root);
+        const li1 = React.createElement('li',{
+            children: 'Apel'
+        });
+        const li2 = React.createElement('li',{
+            children: 'Mangga'
+        });
+        const li3 = React.createElement('li',{
+            children: 'Jeruk'
+        });
+        const li4 = React.createElement('li',{
+            children: 'Pisang'
+        });
+
+        const wrapper_list = React.createElement(
+            React.Fragment,
+            null,
+            [li1,li2,li3,li4],
+            React.createElement('li', null, 'Semangka'),
+            "Bebas",
+            " ini children"
+        );
+
+
+        ReactDOM.render(wrapper_list, root);
     </script>
 </body>
 </html>
