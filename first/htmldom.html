@@ -27,7 +27,23 @@
             children: 'Hello World'
         });
 
-        ReactDOM.render(element, root);
+        const paragraf1 = React.createElement('p',{
+            className: 'paragraph 1',
+            children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.'
+        });
+
+        const paragraf2 = React.createElement('p',{
+            className: 'paragraph 2',
+            children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.'
+        });
+
+        const wrapper = React.createElement(React.Fragment,{            
+            children: ['Hello',' JS',paragraf1,paragraf2]
+        });
+
+
+
+        ReactDOM.render(wrapper, root);
     </script>
 </body>
 </html>
