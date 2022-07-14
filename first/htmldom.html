@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
     <script type="text/babel">
-        // const root = document.querySelector('#root');
+        const root = document.querySelector('#root');
 
         // const element = document.createElement('h1');
         // element.textContent = 'Hello World';
@@ -66,20 +66,35 @@
         //     " ini children"
         // );
 
+        // const element_babel = (
+        //     <ul>
+        //         <li>Apel</li>
+        //         <li>Mangga</li>
+        //         <li>Jeruk</li>
+        //         <li>Pisang</li>
+        //         <li>Semangka</li>
+        //     </ul>
+        // );
+
+        function ngegas(text){
+            return text.toUpperCase();
+        }
+
+        const name = 'Supri';
+        const element = <h1 className="heading-1">Hello {ngegas(name)}</h1>;
+
+        const className = 'heading-2';
+        const img_placeholde = 'https://via.placeholder.com/500';
+
         const element_babel = (
-            <ul>
-                <li>Apel</li>
-                <li>Mangga</li>
-                <li>Jeruk</li>
-                <li>Pisang</li>
-                <li>Semangka</li>
-            </ul>
+            <h1 className={className}>Hello {ngegas(name)}</h1>
         );
 
-
-
-
-        ReactDOM.render(element_babel, root);
+        const element_img = (
+            <img src={img_placeholde} alt=""/>
+        );
+        // ReactDOM.render(element, root);
+        ReactDOM.createRoot(root).render(element_img);
     </script>
 </body>
 </html>
