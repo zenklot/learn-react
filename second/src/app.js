@@ -1,13 +1,13 @@
 const root = ReactDOM.createRoot(document.querySelector('#root'));
+const className = 'box';
 
 function tick(){
     const element = (
-        <div>
+        <div className={className}>
             <h1>Jam Sekarang</h1>
-            <h2>{new Date().toLocaleTimeString()}</h2>
+            <h2 style={{ backgroundColor: "red", color: 'white' }}>{new Date().toLocaleTimeString()}</h2>
         </div>
     )
-    // ReactDOM.render(element, root);
     root.render(element);
 }
 tick()
