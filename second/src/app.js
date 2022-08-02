@@ -1,29 +1,27 @@
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 
 function App() {
-    // Manual
-    // const state = React.useState(0)
-    // const count = state[0]
-    // const setCount = state[1]
+    const [diklik, setDiklik] = React.useState(false);
+    const [count, setCount] = React.useState(1);
 
-    // Automatic
-    const [count, setCount] = React.useState(0)
+    
 
+    React.useEffect(() => {
+        console.log(document.getElementById('judul'));
+    }, [count]);
+
+    React.useEffect(() => {
+        console.log('useEffect');
+    }, []);
     return (
-        <>
-            <button onClick={
-                () => {
-                    setCount(count - 1)
-                }
-            }>-</button>
-            <span>{count}</span>
-            <button onClick={
-              function (){
-                setCount(count + 1)
-              }  
-            }>+</button>
-        </>
+    <>
+        <h1 id="judul">Hello World</h1>
+        <button onClick={() => setDiklik(true)}>Klik {diklik}</button>
+        <button onClick={() => setCount(count + 1)}>Tambah{count}</button>
+        <span>Nilai Saat ini : {count}</span>
+    </>
     )
 }
+
 
 root.render(<App />);
