@@ -1,5 +1,4 @@
 # Learn React.Js
-## _The Last Markdown Editor, Ever_
 
 Ini adalah kumpulan code belajar React.Js pribadi, untuk berpindah ke pelajaran sebelumnya silahkan pindah ke commitan yang diinginkan :)
 
